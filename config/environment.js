@@ -2,10 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'super-rentals',
+    modulePrefix: 'super-articles',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'resplendent-torch-4236.firebaseIO.com',
+    firebase: 'vivid-torch-9497.firebaseIO.com',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -2,28 +2,28 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('rental');
+    return this.store.findAll('article');
   },
 
   actions: {
     save3(params) {
-      var newRental = this.store.createRecord('rental', params);
-      newRental.save();
+      var newArticle = this.store.createRecord('article', params);
+      newArticle.save();
       this.transitionTo('index');
     },
 
-    update(rental, params) {
+    update(article, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-          rental.set(key,params[key]);
+          article.set(key,params[key]);
         }
       });
-      rental.save();
+      article.save();
       this.transitionTo('index');
     },
 
-    destroyRental(rental) {
-      rental.destroyRecord();
+    destroyArticle(article) {
+      article.destroyRecord();
       this.transitionTo('index');
     }
   }

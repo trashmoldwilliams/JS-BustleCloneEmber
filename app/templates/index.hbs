@@ -1,31 +1,14 @@
 <ul>
-  {{#each model as |article|}}
-    {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
-  {{/each}}
+  <div class="row">
+    {{#each model as |article|}}
+      <div class="col-sm-4">
+        {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
+      </div>
+    {{/each}}
+  </div>
 </ul>
 
 {{new-article save2="save3"}}
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
-
-<!-- 
-{{#everyNth model}}
-{{/everyNth}}
-
-{{#everyNth article 3}}
-  {{#if isModZeroNotFirst}}
-    </div>
-  {{/if}}
-  {{#if isModZero}}
-    <div class="row">
-  {{/if}}
-  <div class="col-sm-4">
-    <div class="thumb">
-      {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
-    </div>
-  </div>
-  {{#if isLast}}
-    </div>
-  {{/if}}
-{{/everyNth}} -->

@@ -1,10 +1,11 @@
 <ul>
   <div class="row">
-    {{#each model as |article|}}
+    {{every-nth model}}
+    <!-- {{#each model as |article|}}
       <div class="col-sm-4">
-        {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
+        {{every-nth article}}{{article-tile article=article update="update" destroyArticle="destroyArticle"}}
       </div>
-    {{/each}}
+    {{/each}} -->
   </div>
 </ul>
 

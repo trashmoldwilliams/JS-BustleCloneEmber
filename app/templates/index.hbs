@@ -1,8 +1,3 @@
-<h1> Welcome to Bustle </h1>
-
-We hope you find exactly what you're looking for in a place to stay.
-
-
 <ul>
   {{#each model as |article|}}
     {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
@@ -13,3 +8,24 @@ We hope you find exactly what you're looking for in a place to stay.
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+
+<!-- 
+{{#everyNth model}}
+{{/everyNth}}
+
+{{#everyNth article 3}}
+  {{#if isModZeroNotFirst}}
+    </div>
+  {{/if}}
+  {{#if isModZero}}
+    <div class="row">
+  {{/if}}
+  <div class="col-sm-4">
+    <div class="thumb">
+      {{article-tile article=article update="update" destroyArticle="destroyArticle"}}
+    </div>
+  </div>
+  {{#if isLast}}
+    </div>
+  {{/if}}
+{{/everyNth}} -->

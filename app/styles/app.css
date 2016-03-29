@@ -1,3 +1,7 @@
 body {
   font-family: proxima-nova-alt,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+.articleTile img {
+  height: 300px;
+}
